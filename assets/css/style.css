@@ -121,9 +121,11 @@
     font-weight: 500;
 
 }
-.pt_60{
+
+.pt_60 {
     padding-top: 60px;
 }
+
 .button_size .pt_60 {
     padding-top: 60px;
 }
@@ -337,9 +339,11 @@ ul {
     line-height: 161.7%;
     /* 29.106px */
 }
-.align_lg{
+
+.align_lg {
     align-items: center;
 }
+
 .heading_6 {
     color: rgba(43, 53, 62, 0.70);
     font-family: 'Roboto', sans-serif;
@@ -357,70 +361,76 @@ ul {
 .mt_12 {
     margin-top: 12px;
 }
-
 .pt_90 {
     padding-top: 9px;
 }
-.w_50{
+.w_50 {
     width: 50%;
+}
+.hover:hover {
+    background-color: blue;
+    color: white;
+}
 
-}
-.hover:hover{
-   background-color: blue;
-   color: white;
-}
-.hover_1:hover{
+.hover_1:hover {
     background-color: white;
     color: #1E71FF;
 
 }
-
-
-
-
-@media(max-width: 992px) {
-    .phone-s {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: black;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        flex-direction: column;
-        z-index: 2;
-        transition: all 600ms linear;
-    }
-.position_absolute{
-    position: unset;
+.nav_box {
+    position: fixed;
     width: 100%;
-}
-     .w_50{
+    max-width: 2500px;
+    background-color: #1E71FF;
+    height: 70px;
+    z-index: 3;
+} 
+
+@media (max-width:992px) {
+    label[for="icon"] {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    label[for="icon"]>span {
         width: 100%;
-    
+        background-color: white;
+        height: 5px;
+        border-radius: 2px;
     }
-    .align_lg{
-        align-items: start;
+
+    ul.mobile-view {
+        background-color: blue;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        z-index: 2;
+        transition: all 800ms linear;
+    }
+
+    input[type="checkbox"]:checked+ul {
+        right: 0;
+        gap: 58px;
+    }
+
+    ul {
+        padding-left: 0 !important;
     }
 }
-
-@media (min-width: 992px) {
-    .phone-s {
-        display: none;
-
-    }
-
-    .display {
-        display: none;
-    }
-}
-
-input[type="checkbox"]:checked+.phone-s {
-    right: 0;
-}
-
+ 
+ 
 @media (min-width:1220px) {
     .pt_158 {
         padding-top: 125px;
@@ -435,25 +445,35 @@ input[type="checkbox"]:checked+.phone-s {
         padding-bottom: 60px;
     }
 }
+
 @media (max-width:992px) {
-    .pt_92{
+    .pt_92 {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    
+
 }
+
 @media (max-width:992px) {
-    .pt_90{
-        margin-top:30px;
-        
+    .pt_90 {
+        margin-top: 30px;
+
     }
-     .mt_90{
+
+    .mt_90 {
         margin-top: 20px;
     }
-     .pt_253{
+
+    .pt_253 {
         padding-top: 33px;
     }
-    
+.position_absolute {
+    position: unset;
+    width: 100%;
+}
+}
+.pt_42 {
+    padding-top: 20px;
 }
 @media (max-width:1420px) {
     .position_absolute {
@@ -463,9 +483,13 @@ input[type="checkbox"]:checked+.phone-s {
         padding-top: 102px;
         padding-bottom: 212px;
     }
+    .pt_92{
+        padding-bottom: 30px;
+        padding-top: 5px;
+    }
 }
 @media (max-width:1920px) {
-   
+
     .position_absolute{
         top: 10%;
     }
@@ -474,13 +498,27 @@ input[type="checkbox"]:checked+.phone-s {
         padding-bottom: 160px;
     }
 }
+
 @media (min-width:1920px) {
-   
-    .position_absolute{
-        top: 0;
+
+    .position_absolute {
+        top: 7%;
     }
+
     .pt_158 {
-        padding-top: 102px;
-        padding-bottom: 212px;
+        padding-top: 140px;
+        padding-bottom: 260px;
     }
 }
+@media (max-width: 576px) {
+    .pt_158{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+}
+   @media(max-width: 768px) {
+     .pt_158{
+        padding-top: 41px;    
+        padding-bottom: 42px;
+     }
+   }
